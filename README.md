@@ -2,6 +2,9 @@
 
 ## Team QuackAttack!
 
+### DEALBREAKERS (FIX)
+- Must import the EPRSocket *right next* to the rest of the source files, rather than the one from the SDK.
+
 ### Protocol background
 [This paper covers security concerns](https://www.researchgate.net/publication/252481123_Security_and_implementation_of_differential_phase_shift_quantum_key_distribution_systems)
 
@@ -18,9 +21,20 @@ To run:
 - Requires Linux, Mac OSX, Windows Subsystem for Linux
 - Supports Python3 <=3.9 
 
+- Establish `conda` environment using `conda create qkd-env python=3.9`
+- Test that QNE and NetQASM are availble
+
+`git clone https://github.com/meltyness/qkd-strap`
+
+`qne application init qkd-strap`
+
 `cd qkd-strap`
-`qne experiment run exp2 --timeout=30`
-`vim exp2/raw_output/LAST/results.yaml`
+
+`qne experiment create exp qkd-strap randstad`
+
+`qne experiment run exp --timeout=30`
+
+`vim exp/raw_output/LAST/results.yaml`
 
 Targeted results are returned in the dict as `secret_key`
 
