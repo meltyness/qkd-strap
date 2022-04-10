@@ -1,1 +1,1 @@
-qne appliaction init qkd
+qne application init qkd
