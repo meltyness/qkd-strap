@@ -26,7 +26,7 @@ To run:
 
 `git clone https://github.com/meltyness/qkd-strap`
 
-`qne application init qkd-strap`
+`qne application init qkd-strap` or `./env_setup.py` to faciliate
 
 `cd qkd-strap`
 
