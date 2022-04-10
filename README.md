@@ -28,7 +28,7 @@ To run:
 
 `cd qkd-strap`
 
-use `./env_setup.py` to faciliate
+use `./env_setup.sh` to faciliate
 
 `cd qkd`
 
