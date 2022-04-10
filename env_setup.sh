@@ -11,6 +11,7 @@ if [[ $var =~ "already exists" ]]; then
 	echo Opening default, ~/.qne/applications.json, in nano
 	read -p "Press enter to continue ..."
 	nano ~/.qne/applications.json
+	qne application init qkd
 else
 	echo OK
 fi
