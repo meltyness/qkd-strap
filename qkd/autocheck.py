@@ -53,7 +53,7 @@ def main():
         shutil.rmtree(EXPERIMENT_NAME)
 
     result = subprocess.run(
-        ["qne", "experiment", "create", EXPERIMENT_NAME, "qkd-strap", "randstad"],
+        ["qne", "experiment", "create", EXPERIMENT_NAME, "qkd", "randstad"],
         stdout=subprocess.DEVNULL,
     )
     if result.returncode != 0:
