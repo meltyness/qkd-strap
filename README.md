@@ -21,6 +21,9 @@ To run:
 - Requires Linux, Mac OSX, Windows Subsystem for Linux
 - Supports Python3 <=3.9 
 
+- Establish `conda` environment using `conda create qkd-env python=3.9`
+- Test that QNE and NetQASM are availble
+
 `cd qkd-strap`
 `qne experiment run exp2 --timeout=30`
 `vim exp2/raw_output/LAST/results.yaml`
