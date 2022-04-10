@@ -26,11 +26,11 @@ To run:
 
 `git clone https://github.com/meltyness/qkd-strap`
 
-`qne application init qkd-strap` or `./env_setup.py` to faciliate
-
 `cd qkd-strap`
 
-`qne experiment create exp qkd-strap randstad`
+use `./env_setup.py` to faciliate
+
+`cd qkd`
 
 `qne experiment run exp --timeout=30`
 
