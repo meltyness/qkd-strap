@@ -5,9 +5,13 @@ from dataclasses import dataclass
 from typing import Optional
 
 from netqasm.logging.glob import get_netqasm_logger
-from netqasm.sdk import EPRSocket
+#from netqasm.sdk import EPRSocket
+
+from epr_socket import EPRSocket
+
 from netqasm.sdk.classical_communication.message import StructuredMessage
 from netqasm.sdk.external import NetQASMConnection, Socket
+
 
 logger = get_netqasm_logger()
 
@@ -182,7 +186,7 @@ class PairInfo:
     # Whether measurement outcome is the same as Bob's. (Only for pairs used for error estimation.)
     same_outcome: Optional[bool] = None
 
-# Setting num_bits to 72 gives around a 99.99% chance of getting a key successfully with noiseless channel
+# INFO: Setting num_bits to 72 gives around a 99.99% chance of getting a key successfully with noiseless channel
 def main(app_config=None, num_bits=72, key_length=16):
     # num_bits configured by alice.yaml
     num_test_bits = max(int(num_bits / 4), 1)

@@ -5,7 +5,10 @@ from dataclasses import dataclass
 from typing import Optional
 
 from netqasm.logging.glob import get_netqasm_logger
-from netqasm.sdk import EPRSocket
+#from netqasm.sdk import EPRSocket
+
+from epr_socket import EPRSocket
+
 from netqasm.sdk.classical_communication.message import StructuredMessage
 from netqasm.sdk.external import NetQASMConnection, Socket
 
@@ -72,10 +75,6 @@ def filter_bases(socket, pairs_info):
     for (i, basis), (remote_i, remote_basis) in zip(bases, remote_bases):
         assert i == remote_i
         pairs_info[i].same_basis = basis == remote_basis
-        if pairs_info[i].same_basis:
-            logger.info(f"bob selected {i} as a shared roll")
-        else:
-            logger.info(f"bob did not select {i} as a shared roll")
 
     return pairs_info
 

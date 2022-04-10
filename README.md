@@ -3,7 +3,7 @@
 ## Team QuackAttack!
 
 ### DEALBREAKERS (FIX)
-- Must import the EPRSocket *right next* to the rest of the source files, rather than the one from the SDK.
+- Implement classical link authentication
 
 ### Protocol background
 [This paper covers security concerns](https://www.researchgate.net/publication/252481123_Security_and_implementation_of_differential_phase_shift_quantum_key_distribution_systems)
